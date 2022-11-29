@@ -1,84 +1,83 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Itim', cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
-
-.background {
-    background-color: #43434C;
-    height: 100vh;
-    padding-top: 1px;
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
 }
-
-.title {
-    color: white;
-    text-align: center;
-    font-size: 40px;
-    margin-top: 1%;
+html {
+  font-size: 16px;
 }
-
-.display {
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
-
-.hide {
-    display: none;
-}
-
 .container {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-    max-width: 300px;
-
+  width: 70vmin;
+  height: 70vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmin;
 }
-
-.tile {
-    border: 1px solid white;
-    min-width: 100px;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    cursor: pointer;
+.button-option {
+  background: #ffffff;
+  height: 22vmin;
+  width: 22vmin;
+  border: none;
+  border-radius: 8px;
+  font-size: 12vmin;
+  color: #d161ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-
-.playerX {
-    color: #84DCCF;
+.button-option:hover {
+  background: #000;
 }
-
-.playerO {
-    color: #AB8476;
+#restart {
+  font-size: 1.3em;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: #0a0027;
+  color: #ffffff;
+  border: none;
+  position: relative;
+  margin: 1.5em auto 0 auto;
+  display: block;
 }
-
-.controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1em;
+#restart:hover{
+  color: #0a0027;
+  background-color: #ffffff;
 }
-
-.controls button {
-    color: white;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 20px;
-    margin-left: 1em;
-    cursor: pointer;
+.popup {
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 12vmin;
 }
-
-.restart {
-    background-color: #498AFB;
+#new-game {
+  font-size: 0.6em;
+  padding: 0.5em 1em;
+  background-color: #0a0027;
+  color: #ffffff;
+  border-radius: 0.2em;
+  border: none;
 }
-
-#reset {
-    background-color: #FF3860;
+#message {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+}
+.popup.hide {
+  display: none;
 }
